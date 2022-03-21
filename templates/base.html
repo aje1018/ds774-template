@@ -59,6 +59,13 @@
         (url_for('records'), 'records', 'Records'),
         (url_for('contact'), 'contact', 'Contact')
     ] -%}
+
+    <ul class="nav navbar-nav navbar-right">
+      <li>'
+        <a href="/records">Issues Log</a>
+      </li>
+    </ul>
+
     <!-- Loop to set proper link active in Navbar -->
     {% set active_page = active_page|default('home') -%}
     <div class="collapse navbar-collapse" id="navbar">
