@@ -36,8 +36,8 @@ def contact():
     else:
         return render_template('contact.html', message=message)
 
-@app.route("/admin", methods=['GET', 'POST'])
-def admin():
+@app.route("/records", methods=['GET', 'POST'])
+def records():
     error = ''
     records = ''
     print(request)
@@ -46,7 +46,7 @@ def admin():
     if request.method == 'POST':
 
         # If the form was Login, perform log in steps
-        if request.form.get('admin') == 'Login':
+        if request.form.get('records') == 'Login':
             username = request.form['username']
             password = request.form['password']
 
@@ -64,7 +64,7 @@ def admin():
                 error = 'Invalid Username or Password'
         
         # if form was logout button, end user session
-        elif request.form.get('admin')  == 'Logout':
+        elif request.form.get('records')  == 'Logout':
             session.pop('user_id')
 
         
@@ -73,7 +73,7 @@ def admin():
         records = get_records()
 
     # return the admin page, showing any message or data that we may have
-    return render_template('admin.html', error = error, records = records)
+    return render_template('records.html', error = error, records = records)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
