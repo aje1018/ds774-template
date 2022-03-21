@@ -5,7 +5,7 @@ from functions.admin import contact_form,login_user, get_records, get_single_rec
 
 app = Flask(__name__)
 
-app.secret_key = "IAN"
+app.secret_key = "ABE"
 
 @app.route("/")
 def home():
