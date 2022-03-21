@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}<title>Events</title>{% endblock %}
+{% set active_page = "events" %}
+
+{% block content %}
+  <!-- container for tablular structure: 1 row -->
+<div class="container">
+  <div class="row">
+  
+  <!-- column 1 -->
+    <div class="col-sm-12">
+      <h3>Upcoming Events</h3>
+      <ul>
+        <li>04/01/2022: Company wide meeting</li>
+        <li>04/20/2022: International Plunger Expo</li>
+        <li>05/01/2022: Shut down company</li>
+      </ul>
+    </div>
+    
+  </div>
+</div>
+{% endblock %}
