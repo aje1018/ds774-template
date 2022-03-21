@@ -16,7 +16,7 @@ def documents():
     return render_template('documents.html')
 
 @app.route("/announcements")
-def documents():
+def announcements():
     return render_template('announcements.html')
 
 @app.route('/contact', methods=['GET', 'POST'])
