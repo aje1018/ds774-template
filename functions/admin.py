@@ -198,7 +198,6 @@ def edit_record(message_id, fname, lname, eaddress, message):
         if conn is not None:
             conn.close()
 
-
 def delete_record(message_id):
     
     conn = connect_to_db()
