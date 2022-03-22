@@ -81,7 +81,7 @@ def records():
         records = get_records()
 
     # return the admin page, showing any message or data that we may have
-    return render_template('records.html', error = error, records = records)
+    return render_template('edit.html', error = error, records = records)
 
 @app.route("/register", methods=['GET', 'POST'])
 def register():
