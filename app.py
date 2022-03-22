@@ -107,6 +107,7 @@ def register():
 @app.route("/edit", methods=['GET', 'POST'])
 def edit():
     msg_id = request.args['id']
+    entry = get_single_record(msg_id)
     if request.method == 'POST':
         if request.form.get('edit') == 'save':
             fname = request.form['fname']
@@ -118,7 +119,7 @@ def edit():
             return redirect('/records')
 
         elif request.form.get('admin') == 'Edit':
-            return redirect('/edit')
+            return render_template('edit.html', record = entry)
 
         elif request.form.get('edit') == 'cancel':
             return redirect('/records')
@@ -126,8 +127,5 @@ def edit():
         elif request.form.get('admin') == 'Delete':
             delete_record(msg_id)
             return redirect('/records')
-
-
-    entry = get_single_record(msg_id)
 
     return render_template('edit.html', record = entry)
