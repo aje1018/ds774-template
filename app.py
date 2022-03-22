@@ -71,7 +71,7 @@ def records():
                 error = 'Invalid Username or Password'
         
         # if form was logout button, end user session
-        elif request.form.get('logout')  == 'Logout':
+        elif request.form.get('admin')  == 'Logout':
             session.pop('user_id')
 
         
