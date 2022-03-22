@@ -52,9 +52,8 @@ def records():
 
     # If method was POST, a form was submitted
     if request.method == 'POST':
-
         # If the form was Login, perform log in steps
-        if request.form.get('records') == 'Login':
+        if request.form.get('admin') == 'Login':
             username = request.form['username']
             password = request.form['password']
 
@@ -72,7 +71,7 @@ def records():
                 error = 'Invalid Username or Password'
         
         # if form was logout button, end user session
-        elif request.form.get('records')  == 'Logout':
+        elif request.form.get('logout')  == 'Logout':
             session.pop('user_id')
 
         
