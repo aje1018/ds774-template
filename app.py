@@ -117,6 +117,9 @@ def edit():
             edit_record(msg_id, fname, lname, eaddress, message)
             return redirect('/records')
 
+        elif request.form.get('admin') == 'Edit':
+            return redirect('/edit')
+
         elif request.form.get('edit') == 'cancel':
             return redirect('/records')
         
